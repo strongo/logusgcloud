@@ -93,6 +93,8 @@ github.com/strongo/logus v0.0.0-20240628225416-f1d6d17edf1e h1:oV/HqDAbLvKa+ASHg
 github.com/strongo/logus v0.0.0-20240628225416-f1d6d17edf1e/go.mod h1:sd8gjJklqGQAg+Q0mlP5MWgzguAuxR25YYFSkfVOPdc=
 github.com/strongo/logus v0.0.0-20240628225821-04cf45b5968f h1:U+ikeZnsuwnmzU0KKEo9W+DA899Sf5ZDKvuiHKDFHf8=
 github.com/strongo/logus v0.0.0-20240628225821-04cf45b5968f/go.mod h1:sd8gjJklqGQAg+Q0mlP5MWgzguAuxR25YYFSkfVOPdc=
+github.com/strongo/logus v0.2.0 h1:IbLupLW9WMIwjefJF+u9/Ajlaw6ysFuEeKQxOFX5tOE=
+github.com/strongo/logus v0.2.0/go.mod h1:sd8gjJklqGQAg+Q0mlP5MWgzguAuxR25YYFSkfVOPdc=
 go.opencensus.io v0.24.0 h1:y73uSU6J157QMP2kn2r30vwW1A2W2WFwSCGnAVxeaD0=
 go.opencensus.io v0.24.0/go.mod h1:vNK8G9p7aAivkbmorf4v+7Hgx+Zs0yY+0fOtgBfjQKo=
 go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.49.0 h1:4Pp6oUg3+e/6M4C0A/3kJ2VYa++dsWVTtGgLVj5xtHg=
