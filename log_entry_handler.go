@@ -3,6 +3,7 @@ package logusgcloud
 import (
 	"cloud.google.com/go/logging"
 	"context"
+	"fmt"
 	"github.com/strongo/logus"
 )
 
@@ -20,8 +21,12 @@ func (l logEntryHandler) Log(ctx context.Context, entry logus.LogEntry) error {
 		SpanID:   logus.GetSpanID(ctx),
 		Labels:   logus.GetLabels(ctx),
 	}
-	if entry.Message != "" {
-		gcLogEntry.Payload = entry.Message
+	if entry.MessageFormat != "" {
+		if len(entry.MessageArgs) == 0 {
+			gcLogEntry.Payload = fmt.Sprintf(entry.MessageFormat, entry.MessageArgs...)
+		} else {
+			gcLogEntry.Payload = entry.MessageFormat
+		}
 	} else if entry.Payload != nil {
 		gcLogEntry.Payload = entry.Payload
 	}
