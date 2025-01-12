@@ -4,7 +4,7 @@ go 1.22.3
 
 require (
 	cloud.google.com/go/logging v1.13.0
-	github.com/strongo/logus v0.2.0
+	github.com/strongo/logus v0.2.1
 )
 
 require (
