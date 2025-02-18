@@ -7,9 +7,7 @@ import (
 	"os"
 )
 
-func HttpHandlerForAppEngine(handler http.Handler, newLogger func(logID string, opts ...logging.LoggerOption) *logging.Logger) http.Handler {
-
-	logger := newLogger("request_log_entries") // fmt.Sprintf("projects/%s/logs/request_log_entries", projectID)
+func HttpHandlerForAppEngine(handler http.Handler, logger *logging.Logger) http.Handler {
 
 	gaeInstanceID := os.Getenv("GAE_INSTANCE")
 
