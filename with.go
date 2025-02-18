@@ -53,3 +53,16 @@ func getLogger(ctx context.Context) *logging.Logger {
 	}
 	return nil
 }
+
+var requestContextKey = "r"
+
+func withRequest(ctx context.Context, r *http.Request) context.Context {
+	return context.WithValue(ctx, &requestContextKey, r)
+}
+
+func GetRequest(ctx context.Context) *http.Request {
+	if r, ok := ctx.Value(&requestContextKey).(*http.Request); ok {
+		return r
+	}
+	return nil
+}

@@ -18,6 +18,7 @@ func HttpHandlerForAppEngine(handler http.Handler, newLogger func(logID string, 
 		projectID := os.Getenv("GOOGLE_CLOUD_PROJECT")
 		ctx = withAppEngineContext(ctx, r, projectID, gaeInstanceID)
 		ctx = withLogger(ctx, logger)
+		ctx = withRequest(ctx, r)
 		r = r.WithContext(ctx)
 		defer func() {
 			go func() {
