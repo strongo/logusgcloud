@@ -2,7 +2,7 @@ module github.com/strongo/logusgcloud
 
 go 1.22.7
 
-toolchain go1.24.3
+toolchain go1.24.4
 
 require (
 	cloud.google.com/go/logging v1.13.0
