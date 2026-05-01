@@ -5,7 +5,7 @@ go 1.25.0
 toolchain go1.26.2
 
 require (
-	cloud.google.com/go/logging v1.16.0
+	cloud.google.com/go/logging v1.17.0
 	github.com/strongo/logus v0.4.1
 )
 
