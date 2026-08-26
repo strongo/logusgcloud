@@ -6,7 +6,7 @@ toolchain go1.27.0
 
 require (
 	cloud.google.com/go/logging v1.19.1
-	github.com/strongo/logus v0.4.1
+	github.com/strongo/logus v0.4.3
 )
 
 require (
