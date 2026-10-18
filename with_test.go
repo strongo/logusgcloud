@@ -16,6 +16,9 @@ func Test_getLogger(t *testing.T) {
 	if got := getLogger(ctx); got != logger {
 		t.Errorf("getLogger() = %v, want %v", got, logger)
 	}
+	if got := getLogger(context.Background()); got != nil {
+		t.Errorf("getLogger(Background) = %v, want nil", got)
+	}
 }
 
 func Test_withLogger(t *testing.T) {
@@ -94,5 +97,16 @@ func Test_withAppEngineContext(t *testing.T) {
 	}
 	if spanID := logus.GetSpanID(ctx); spanID != expectedSpanID {
 		t.Errorf("withAppEngineContext() spanID = %s, want %s", spanID, expectedSpanID)
+	}
+}
+
+func Test_withRequest_GetRequest(t *testing.T) {
+	if got := GetRequest(context.Background()); got != nil {
+		t.Errorf("GetRequest(Background) = %v, want nil", got)
+	}
+	r := &http.Request{}
+	ctx := withRequest(context.Background(), r)
+	if got := GetRequest(ctx); got != r {
+		t.Errorf("GetRequest(ctx) = %v, want %v", got, r)
 	}
 }
