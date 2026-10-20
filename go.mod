@@ -2,11 +2,13 @@ module github.com/strongo/logusgcloud
 
 go 1.26.0
 
-toolchain go1.27.2
+toolchain go1.27.3
 
 require (
 	cloud.google.com/go/logging v1.20.0
 	github.com/strongo/logus v0.4.7
+	google.golang.org/api v0.287.1
+	google.golang.org/grpc v1.83.2
 )
 
 require (
@@ -35,10 +37,8 @@ require (
 	golang.org/x/sys v0.47.0 // indirect
 	golang.org/x/text v0.41.0 // indirect
 	golang.org/x/time v0.15.0 // indirect
-	google.golang.org/api v0.287.1 // indirect
 	google.golang.org/genproto v0.0.0-20260319201613-d00831a3d3e7 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20260630182238-925bb5da69e7 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260630182238-925bb5da69e7 // indirect
-	google.golang.org/grpc v1.83.2 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
